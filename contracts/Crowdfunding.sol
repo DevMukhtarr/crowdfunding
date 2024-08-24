@@ -62,7 +62,7 @@ contract Crowdfunding {
         Campaign storage campaign = campaigns[_campaignId]; 
         require(block.timestamp <= campaign.deadline, "Campaign is no longer going on");
         require(msg.value > 0, "Donation amount must be greater than 0");
-        require(campaign.ended == true, "Campaign already ended");
+        require(campaign.ended == false, "Campaign already ended");
 
         // increase value of amount raised
         campaign.amountRaised += msg.value;
