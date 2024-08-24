@@ -13,7 +13,7 @@ contract Crowdfunding {
     }
     // Individual campaign number
     mapping(uint => Campaign) public campaigns;
-    // the total count of campaign at that moment
+    // new number created for campaign
     uint public campaignNumber;
 
     // event to notify when a campaign is newly created
