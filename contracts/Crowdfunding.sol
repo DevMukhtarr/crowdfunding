@@ -75,7 +75,7 @@ contract Crowdfunding {
         // get campaign from storage
         Campaign storage campaign = campaigns[_campaignId];
         require(block.timestamp > campaign.deadline, "The Campaign is still going on");
-        require(!campaign.ended, "The Campaign already ended");
+        require(campaign.ended == false, "The Campaign already ended");
 
         campaign.ended = true;
 
